@@ -258,12 +258,11 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway MOZ_ENABLE_WAYLAND=1 _JAVA_AWT_WM_NONREPARENTING=1
 
 exec mako
 exec_always nm-applet --indicator
 exec blueman-tray
 exec mopidy
-exec nextcloud
-
 
 include /etc/sway/config.d/*
