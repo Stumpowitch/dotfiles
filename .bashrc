@@ -6,11 +6,15 @@
 [[ $- != *i* ]] && return
 PS2='[\u@\h \W]\$ '
 
+export WAYLAND_DISPLAY
+export XDG_CURRENT_DESKTOP=sway
 export MOZ_ENABLE_WAYLAND="1"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 gpg-connect-agent updatestartuptty /bye > /dev/null
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 
 secret () {
         output=~/"${1}".$(date +%s).enc
@@ -24,6 +28,8 @@ reveal () {
 
 alias ls='ls --color=auto'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+source <(kitty + complete setup bash)
 
 echo
 neofetch

@@ -13,6 +13,7 @@ alias cp advcp
 alias mv advmv
 alias vi nvim
 alias vim nvim
+alias nano nvim
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # >>> conda initialize >>>
