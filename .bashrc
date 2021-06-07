@@ -33,3 +33,4 @@ source <(kitty + complete setup bash)
 
 echo
 neofetch
+
