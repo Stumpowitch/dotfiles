@@ -264,5 +264,7 @@ exec mako
 exec_always nm-applet --indicator
 exec blueman-tray
 exec mopidy
+exec gpg-connect-agent killagent /bye
+exec gpg-connect-agent /bye
 
 include /etc/sway/config.d/*
