@@ -27,7 +27,8 @@ set $term kitty
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu wofi --show=drun --allow-images --term=$term --gtk-dark | xargs swaymsg exec --
 
-set $browser "chromium --enable-features=UseOzonePlatform --enable-gpu --ozone-platform=wayland"
+#set $browser "chromium --enable-features=UseOzonePlatform --enable-gpu --ozone-platform=wayland"
+set $browser brave
 
 set $filemanager nautilus
 ### Output configuration
